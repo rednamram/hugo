@@ -8,3 +8,13 @@ window.addEventListener("DOMContentLoaded", function () {
     button.style = "display: none ";
     status.innerHTML = "Thanks! Contact form is submitted successfully.";
   }
+
+  function error() {
+    status.innerHTML = "Oops! There was a problem.";
+  }
+
+  // handle the form submission event
+  if (form != null) {
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
